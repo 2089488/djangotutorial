@@ -14,8 +14,8 @@ class Migration(migrations.Migration):
             name='Choice',
             fields=[
                 ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
-                ('choice_text', models.CharField(max_length=200)),
-                ('votes', models.IntegerField(default=0)),
+                ('choice_text', models.CharField(max_length=200, verbose_name=b'choice')),
+                ('votes', models.IntegerField(default=0, verbose_name=b'number of votes:')),
             ],
             options={
             },
@@ -25,7 +25,7 @@ class Migration(migrations.Migration):
             name='Question',
             fields=[
                 ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
-                ('question_text', models.CharField(max_length=200)),
+                ('question_text', models.CharField(max_length=200, verbose_name=b'question')),
                 ('pub_date', models.DateTimeField(verbose_name=b'date published')),
             ],
             options={
